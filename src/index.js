@@ -14,6 +14,10 @@ app.use('/products', productRoute)
 app.use('/customer', customerRoute)
 app.use('/sales', salesRoute)
 
-app.listen(8080, ()=> {
-    console.log("Server started on port 8080")
+console.log(process.env.FACULDADE)
+
+const port = process.env.PORT || 8080
+
+app.listen(port, ()=> {
+    console.log(`Server started on port ${port}`)
 })
